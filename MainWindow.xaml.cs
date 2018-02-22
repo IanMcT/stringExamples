@@ -47,7 +47,7 @@ namespace stringsDemoProgram
             string temp = "";
             Console.WriteLine("Length: " + strDog.Length);
             //forwards
-            for (int i = strDog.Length-1; i >= 0; i--)
+            for (int i = 0; i < strDog.Length; i--)
             {
                 temp += strDog.Substring(i, 1) + "\n";
 
