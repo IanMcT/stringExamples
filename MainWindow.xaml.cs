@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -40,8 +40,33 @@ namespace stringsDemoProgram
             }
             mainWindow.Title = "Hello " + myFirstString;
             btnSetName.Content = myFirstString + " change the title";
-            MessageBox.Show(myFirstString.IndexOf("B").ToString());
+            //MessageBox.Show(myFirstString.IndexOf("B").ToString());
 
+            //Use substring to get part of a word
+            string strDog = "Golden Retriever";
+            string temp = "";
+            Console.WriteLine("Length: " + strDog.Length);
+            //forwards
+            for (int i = strDog.Length-1; i >= 0; i--)
+            {
+                temp += strDog.Substring(i, 1) + "\n";
+
+            }
+            //MessageBox.Show(temp);
+            //backwards
+            temp = "";
+            for (int i = strDog.Length - 1; i >= 0; i--)
+            {
+                temp += strDog.Substring(i, 1) + "\n";
+
+            }
+            //MessageBox.Show(temp);
+
+            //splits - get individual words
+            string names = "Couper,Andrew,Suzy";
+            string[] strName = names.Split(new char[] { ',' });
+            strName[0] = strName[0].Replace("C", "S");
+            MessageBox.Show(strName[0].ToLower());
         }
     }
 }
